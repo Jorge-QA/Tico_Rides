@@ -1,0 +1,130 @@
+body {
+    text-align: center;
+    background-color:rgba(8, 156, 156, 0.993);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 40px;
+}
+
+#main-container {
+font-weight: bold ;
+}
+
+.btn {
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.btn-color {
+color: white;
+background-color: rgb(4, 194, 105);
+}
+
+table{
+    margin: 50px auto;
+    background-color: rgb(243, 201, 167);
+    text-align: left;
+    width: 40%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px black;
+    padding: 10px;
+}
+
+thead {
+    background-color: darkcyan;
+    border-bottom: solid 5px black;
+    color: azure;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover td{
+    background-color: rgb(2, 108, 134);
+    color: whitesmoke;
+}
+
+fieldset {
+    width: 35%;
+    margin: auto;
+    background-color: bisque;
+}
+
+legend {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: rgb(66, 250, 29);
+  }
+  
+  input:hover, select:hover, textarea:hover {
+    background-color: rgb(115, 128, 250);
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    background-color: rgb(48, 48, 245);
+    width: 25%;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block; 
+ }
+
+ .menu li{
+     display: inline-block;
+     text-align: center;
+ }
+
+ .menu li a:hover {
+     background: #ef8354;
+ }
+
+ .enlinea {
+    display: inline-block;
+    margin-left: 70px;
+    margin-right: 70px;
+ }
+
+ form div {
+     padding-top: 10px;
+ }
+
+ form, div, input, label, span, textarea{
+    margin-top: 10px;
+}
+
+.Check-day{
+    display: inline-block;
+    width: 90%;
+}
+
+.time-width {
+    width: 100px;
+}
+
+.align label,input {
+    text-align: justify;
+}
+
+#par:after {
+content: ">";
+font-size: large;
+text-decoration-line: none;
+color: black;
+margin: 5px;
+}

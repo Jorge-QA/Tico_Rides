@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicoRide-Edit-Ride</title>
+    <link rel="stylesheet" href="Stiles/style.css">
+</head>
+
+<body>
+
+    <img src="Images/logo.webp" alig="center" width="200" height="200">
+    <br><br>
+
+    <ul class="menu">
+        <li style="opacity: 0.5;"><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="newRide.html">Rides</a></li>
+        <li style="opacity: 0.5;"><a href="settings.html">Settings</a></li>
+    </ul>
+    <br>
+    <div class="enlinea">
+        <h3>Rides </h3>
+    </div>
+
+    <div class="enlinea">
+        <h4>Welcome user</h4>
+    </div>
+    <img src="Images/photo (1).png" width="50" height="50">
+
+    <br>
+
+    <h6 id="par" style="display: inline;"><a href="newRide.html">Rides</a> </h6>
+    <h6 id="par" style="display: inline;"><a href="watch_ride.html">Watch</a> </h6>
+    <span style="font-size: smaller;"><a style="font-weight: bolder;" href="editRide.html">Edit</a></span>
+
+    <form action="">
+        <div>
+            <label for="RN">Ride Name</label><br>
+            <input type="text" placeholder="Brete" id="RN">
+        </div>
+        <br>
+        <label for="from">Start From: </label>
+        <input type="text" id="from" placeholder="Barrio Los Angeles, C.Q">
+        <img src="Images/map.png" alt="" width="15" height="15">
+        <label for="to">End: </label>
+        <input type="text" id="to" placeholder="Mercado Municipal, C.Q">
+        <img src="Images/map.png" alt="" width="15" height="15">
+        <br><br>
+        <div style="text-align: justify;padding-left: 540px;"> <label for="Dp">Description</label>
+            <br>
+            <textarea name="Description" id="Dp" cols="60" rows="5"
+                placeholder="This is my everyday ride from Barrio Los Angeles to my job's office in Second floor of Coopeservidores building"></textarea>
+        </div>
+
+        <hr width="600px" color=black>
+
+        <br>
+        <h3 style="width: 75%;">When</h3>
+
+        <div style="padding-left: 540px;float: left; text-align: left;">
+            <label for="Dep">Departure</label>
+            <br>
+            <input class="time-width" type="time" id="Dep" value="06:45">
+            <br><br>
+            <label for="EA">Estimated Arrival</label>
+            <br>
+            <input class="time-width" type="time" id="EA" value="07:05">
+        </div>
+
+        <div style="float: left;padding-left: 100px;text-align: justify;">
+
+            <span> <strong>Select Days:</strong> </span>
+            <br><br>
+            <input type="checkbox" id="Monday" checked>
+            <label for="Monday">Monday</label>
+            <br>
+            <input type="checkbox" id="Tuesday" checked>
+            <label for="Tuesday">Tuesday</label>
+            <br>
+            <input type="checkbox" id="Wednesday" checked>
+            <label for="Wednesday">Wednesday</label>
+            <br>
+            <input type="checkbox" id="Thursday" checked>
+            <label for="Thursday">Thursday</label>
+            <br>
+            <input type="checkbox" id="Friday" checked>
+            <label for="Friday">Friday</label>
+            <br>
+            <input type="checkbox" id="Saturday">
+            <label for="Saturday">Saturday</label>
+            <br>
+            <input type="checkbox" id="Sunday">
+            <label for="Sunday">Sunday</label>
+
+        </div>
+
+    </form>
+
+    <br style="clear: left;">
+    <br><br>
+    <span style="padding-right: 200px;"><a href="#">Cancel</a></span>
+
+    <button style="background-color: green; color: aliceblue;font-size: larger;">Save</button>
+
+
+
+
+</body>
+
+</html>
