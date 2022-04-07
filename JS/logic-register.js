@@ -6,11 +6,19 @@ function registrar() {
     let clave1 = document.getElementById("Ps1").value;
     let clave2 = document.getElementById("Ps2").value;
 
-    let persona = { "nombre": nombre, "apellido": apellido, "telefono": telefono, "usuario": usuario, "clave": clave1 };
-    guardarpersona(persona);
+    if (nombre != "" & apellido != "" & telefono != "" & usuario != "" & clave1 != "" & clave2 != "") {
 
-    limpiarCampos();
-    recuperarDataPersonas();
+        if (clave1 == clave2) {
+            let persona = { "nombre": nombre, "apellido": apellido, "telefono": telefono, "usuario": usuario, "clave": clave1 };
+            guardarpersona(persona);
+            alert("Hola " + persona.nombre + " " + persona.apellido + " te damos la bienvenida a TicoRides \n" +
+             "Tu registro se ha completado con éxito...");
+        } else {
+            alert("Claves no coinciden, verifique la información...");
+        }
+    } else {
+        alert("Ingrese todos los datos solicitados por favor...");
+    }
 }
 
 // guarda objetos tipo persona en local storage en un array
@@ -21,7 +29,7 @@ function guardarpersona(persona) {
     localStorage.setItem("DataPersonas", PersonArrayJ);
 }
 
-function limpiarCampos() { // limpia formulario de registro
+function limpiarCampos() { // limpia formulario de registro... lo hace automático
     document.getElementById("FN").value = "";
     document.getElementById("LN").value = "";
     document.getElementById("P").value = "";
