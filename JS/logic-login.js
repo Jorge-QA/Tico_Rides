@@ -8,7 +8,9 @@ function login() {
     if (usuario != "" & clave != "") {
         if (registrado(usuario, clave, Personas)) {
             alert("Bienvenido " + usuario);
+            //location.href = "dashboard.html";
             window.open("dashboard.html");
+            window.close("login.html");
         }else{
             alert("Usuario no registrado o clave incorrecta...");
         }
