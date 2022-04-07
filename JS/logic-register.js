@@ -1,5 +1,5 @@
 function registrar() {
-
+    //Dif fromas de obtener campos de input y form...
     let PersonaFormData = new FormData(form);
 
     let nombre = PersonaFormData.get("FN");
