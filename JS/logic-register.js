@@ -1,4 +1,4 @@
-function registrar(){
+function registrar() {
     let nombre = document.getElementById("FN").value;
     let apellido = document.getElementById("LN").value;
     let telefono = document.getElementById("P").value;
@@ -6,23 +6,31 @@ function registrar(){
     let clave1 = document.getElementById("Ps1").value;
     let clave2 = document.getElementById("Ps2").value;
 
-    let obj = {"nombre": nombre, "apellido": apellido, "telefono": telefono, "usuario": usuario, "clave": clave1}
+    let persona = { "nombre": nombre, "apellido": apellido, "telefono": telefono, "usuario": usuario, "clave": clave1 };
+    guardarpersona(persona);
 
-    let obj_J = JSON.stringify(obj);
-
-    localStorage.setItem(obj.nombre, obj_J);
-
-    alert(nombre + "\n" + apellido + "\n" + telefono + "\n" + usuario + "\n" + clave1 + "\n" + clave2);
-
-    // document.getElementById("LN").value = nombre;  para ponerle texto al input....
     limpiarCampos();
+    recuperarDataPersonas();
 }
 
-function limpiarCampos(){
+// guarda objetos tipo persona en local storage en un array
+function guardarpersona(persona) {
+    let PersonArray = JSON.parse(localStorage.getItem("DataPersonas")) || [];
+    PersonArray.push(persona);
+    let PersonArrayJ = JSON.stringify(PersonArray);
+    localStorage.setItem("DataPersonas", PersonArrayJ);
+}
+
+function limpiarCampos() { // limpia formulario de registro
     document.getElementById("FN").value = "";
     document.getElementById("LN").value = "";
     document.getElementById("P").value = "";
     document.getElementById("UN").value = "";
     document.getElementById("Ps1").value = "";
     document.getElementById("Ps2").value = "";
+}
+//acá se recupera la lista de objetos tipo persona...
+function recuperarDataPersonas() {
+    let listaPersonas = JSON.parse(localStorage.getItem("DataPersonas") || []);
+    alert(listaPersonas[1].nombre);
 }
