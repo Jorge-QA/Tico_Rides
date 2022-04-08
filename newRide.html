@@ -33,7 +33,7 @@
     <h6 id="par" style="font-weight: bolder; display: inline;"><a href="#">Rides</a> </h6>
     <span style="font-size: smaller;"><a style="text-decoration: none; color: lawngreen; font-weight: bolder;" href="watch_ride.html">Watch</a>  </span>
 
-    <form action="">
+    <form id="formNewRide">
         <div>
             <label for="RN">Ride Name</label><br>
             <input type="text" placeholder="Input Text" id="RN">
@@ -100,9 +100,9 @@
     <br><br>
     <span style="font-size: smaller;padding-right: 200px;"><a href="#">Cancel</a></span>
 
-    <button style="background-color: green; color: aliceblue;font-size: larger;">Save</button>
+    <button onclick="registrarRide()" style="background-color: green; color: aliceblue;font-size: larger;">Save</button>
 
-
+    <script src="JS/logic-NewRide.js"></script>
 </body>
 
 </html>

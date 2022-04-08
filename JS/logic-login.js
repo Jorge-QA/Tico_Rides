@@ -9,6 +9,7 @@ function login() {
         if (registrado(usuario, clave, Personas)) {
             alert("Bienvenido " + usuario);
             //location.href = "dashboard.html";
+            localStorage.setItem("UsuarioCargado", usuario);
             window.open("dashboard.html");
             window.close("login.html");
         }else{
