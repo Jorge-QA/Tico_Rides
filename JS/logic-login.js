@@ -7,7 +7,7 @@ function login() {
 
     if (usuario != "" & clave != "") {
         if (registrado(usuario, clave, Personas)) {
-            alert("Bienvenido " + usuario);
+            alert("Bienvenid@ " + usuario);
             //location.href = "dashboard.html";
             localStorage.setItem("UsuarioCargado", usuario);
             window.open("dashboard.html");
