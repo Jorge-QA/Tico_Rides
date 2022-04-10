@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function recuperarDataRides() {
-    let listaRides = JSON.parse(localStorage.getItem("DataRides") || []);
+    let listaRides = JSON.parse(localStorage.getItem("DataRides")) || [];
     return listaRides;
     //alert(listaRides[3].description + "    " + listaRides[4].ridename);
 }

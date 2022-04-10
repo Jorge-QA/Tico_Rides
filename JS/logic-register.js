@@ -46,7 +46,7 @@ function limpiarCampos() { // limpia formulario de registro... lo hace automáti
 }
 //acá se recupera la lista de objetos tipo persona...si usar...
 function recuperarDataPersonas() {
-    let listaPersonas = JSON.parse(localStorage.getItem("DataPersonas") || []);
+    let listaPersonas = JSON.parse(localStorage.getItem("DataPersonas")) || [];
     return listaPersonas;
 }
 

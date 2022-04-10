@@ -33,7 +33,7 @@ function registrado(usuario, clave, Personas) {
 }
 
 function recuperarDataPersonas() {
-    let listaPersonas = JSON.parse(localStorage.getItem("DataPersonas") || []);
+    let listaPersonas = JSON.parse(localStorage.getItem("DataPersonas")) || [];
     return listaPersonas;
 }
 
