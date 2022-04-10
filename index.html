@@ -24,51 +24,43 @@
 
     <p style="width: 70%;">Search for a ride</p>
 
-    <form action="">
+    <form id="formSearchRide">
         <fieldset>
             <label for="from">From: </label>
-            <input type="text" id="from" placeholder="Input Text">
+            <select style="width: 11em;"  id="from" data-placeholder="-Input Text-"></select>
             <label for="to">To: </label>
-            <input type="text" id="to" placeholder="Input Text">
+            <select style="width: 11em;" id="to" data-placeholder="Input Text"></select>
             <br><br>
-            <a href="#" class="btn btn-color" style="padding: 5px 10px;">Find my ride!</a>
+            <button onclick="cargarDatos()" class="btn btn-color" style="padding: 5px 10px;">Find my ride!</button>
         </fieldset>
     </form>
     <br><br>
     <div style="width: 80%;">Results for rides that matches your criteria:</div>
     <div id="main-table">
-        <table>
+        <table id="tableSearchRide">
             <thead>
                 <tr>
                     <th>User</th>
                     <th>Start</th>
                     <th>End</th>
-                    <th></th>
+                    <th>Ridename</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Days</th>
+                    <th>Description</th>
+                    
                 </tr>
             </thead>
             <tr>
-                <td>yluna</td>
-                <td>Barrio Los Angeles</td>
-                <td>Ciudad Quesada</td>
-                <td>View</td>
-            </tr>
-            <tr>
-                <td>rbarboza</td>
-                <td>Ciudad Quesada</td>
-                <td>Los Angeles</td>
-                <td>View</td>
-            </tr>
-            <tr>
-                <td>yluna</td>
-                <td>Ciudad Quesada</td>
-                <td>San Pedro</td>
-                <td>View</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
 
     </div>
 
-<script></script>
+<script src="JS/logic-index.js"></script>
 </body>
 
 </html>

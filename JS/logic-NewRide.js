@@ -22,7 +22,7 @@ function registrarRide() {
     }
 }
 
-// guarda objetos tipo persona en local storage en un array
+// guarda objetos ride persona en local storage en un array
 function guardarRide(ride) {
     let RidesArray = JSON.parse(localStorage.getItem("DataRides")) || [];
     RidesArray.push(ride);
