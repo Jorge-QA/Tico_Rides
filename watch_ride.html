@@ -35,11 +35,11 @@
     <form action="">
         <div>
             <label for="RN">Ride Name</label><br>
-            <input type="text" placeholder="Input Text" id="RN" disabled>
+            <select onchange="mostrarRide()" style="width: 13em" id="RN" ></select>
         </div>
         <br>
         <label for="from">Start From: </label>
-        <input type="text" id="from" placeholder="Location" disabled>
+        <input type="text" id="from" placeholder="Location" disabled >
         <img src="Images/map.png" alt="" width="15" height="15">
         <label for="to">End: </label>
         <input type="text" id="to" placeholder="Input Text" disabled>
@@ -97,9 +97,8 @@
 
     <br style="clear: left;">
     <br><br>
-    <span style=" font-size: smaller;padding-right: 200px;"><a href="#">Cancel</a></span>
 
-    <button style="background-color: green; color: aliceblue;font-size: larger;">Save</button>
+    <script src="JS/logic-watch_ride.js"></script>
     
 </body>
 </html>

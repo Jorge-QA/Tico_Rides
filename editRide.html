@@ -38,20 +38,19 @@
     <form action="">
         <div>
             <label for="RN">Ride Name</label><br>
-            <input type="text" placeholder="Brete" id="RN">
+            <select onchange="mostrarRide()" style="width: 13em" id="RN" ></select>
         </div>
         <br>
         <label for="from">Start From: </label>
-        <input type="text" id="from" placeholder="Barrio Los Angeles, C.Q">
+        <input type="text" id="from">
         <img src="Images/map.png" alt="" width="15" height="15">
         <label for="to">End: </label>
-        <input type="text" id="to" placeholder="Mercado Municipal, C.Q">
+        <input type="text" id="to">
         <img src="Images/map.png" alt="" width="15" height="15">
         <br><br>
         <div style="text-align: justify;padding-left: 540px;"> <label for="Dp">Description</label>
             <br>
-            <textarea name="Description" id="Dp" cols="60" rows="5"
-                placeholder="This is my everyday ride from Barrio Los Angeles to my job's office in Second floor of Coopeservidores building"></textarea>
+            <textarea name="Description" id="Dp" cols="60" rows="5"></textarea>
         </div>
 
         <hr width="600px" color=black>
@@ -62,30 +61,30 @@
         <div style="padding-left: 540px;float: left; text-align: left;">
             <label for="Dep">Departure</label>
             <br>
-            <input class="time-width" type="time" id="Dep" value="06:45">
+            <input class="time-width" type="time" id="Dep">
             <br><br>
             <label for="EA">Estimated Arrival</label>
             <br>
-            <input class="time-width" type="time" id="EA" value="07:05">
+            <input class="time-width" type="time" id="EA">
         </div>
 
         <div style="float: left;padding-left: 100px;text-align: justify;">
 
             <span> <strong>Select Days:</strong> </span>
             <br><br>
-            <input type="checkbox" id="Monday" checked>
+            <input type="checkbox" id="Monday" >
             <label for="Monday">Monday</label>
             <br>
-            <input type="checkbox" id="Tuesday" checked>
+            <input type="checkbox" id="Tuesday" >
             <label for="Tuesday">Tuesday</label>
             <br>
-            <input type="checkbox" id="Wednesday" checked>
+            <input type="checkbox" id="Wednesday" >
             <label for="Wednesday">Wednesday</label>
             <br>
-            <input type="checkbox" id="Thursday" checked>
+            <input type="checkbox" id="Thursday" >
             <label for="Thursday">Thursday</label>
             <br>
-            <input type="checkbox" id="Friday" checked>
+            <input type="checkbox" id="Friday" >
             <label for="Friday">Friday</label>
             <br>
             <input type="checkbox" id="Saturday">
@@ -100,12 +99,11 @@
 
     <br style="clear: left;">
     <br><br>
-    <span style="padding-right: 200px;"><a href="#">Cancel</a></span>
 
-    <button style="background-color: green; color: aliceblue;font-size: larger;">Save</button>
-
+    <button style="background-color: green; color: aliceblue;font-size: larger;">Save Changes</button>
 
 
+<script src="JS/logic-editRide.js"></script>
 
 </body>
 
