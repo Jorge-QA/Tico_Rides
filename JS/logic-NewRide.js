@@ -13,10 +13,14 @@ function registrarRide() {
 
 
     if (ridename != "" & from != "" & to != "" & description != "" & departure != "" & arrival != "" & dias != "") {
-        let ride = { "usuario": usuario, "ridename": ridename, "from": from, "to": to, "description": description, "departure": departure, "arrival": arrival, "days": dias };
+        if (!RideExistente(ridename)) {
+               let ride = { "usuario": usuario, "ridename": ridename, "from": from, "to": to, "description": description, "departure": departure, "arrival": arrival, "days": dias };
         guardarRide(ride);
         alert(ridename + " se ha guardado con éxito...");
         limpiarCampos();
+        }else{
+            alert("Nombre de ride ya registrado...");
+        }
     } else {
         alert("Ingrese todos los datos solicitados por favor...");
     }
@@ -81,3 +85,22 @@ function Dias() {
 return dias;
 
 }
+
+function recuperarDataRides() {
+    let listaRides = JSON.parse(localStorage.getItem("DataRides")) || [];
+    return listaRides;
+    //alert(listaRides[3].description + "    " + listaRides[4].ridename);
+}
+
+function RideExistente(ride) {
+    let existente = false;
+    let Rides = recuperarDataRides();
+    for (let i = 0; i < Rides.length; i++) {
+        if (Rides[i].ridename == ride) {
+            existente = true;
+            return existente;
+        }
+    }
+    return existente;
+}
+
