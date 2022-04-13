@@ -1,7 +1,16 @@
 //para cargar los datos una vez se abra la pág...
 document.addEventListener("DOMContentLoaded", function () {
-   cargarDatos();
+    cargarDatos();
+    pintarUsuario();
+
 });
+
+function pintarUsuario() {
+    let usuario = localStorage.getItem("UsuarioCargado");
+    let campoUsuario = document.getElementById("usuario");
+    campoUsuario.innerText = usuario;
+}
+
 
 function recuperarDataRides() {
     let listaRides = JSON.parse(localStorage.getItem("DataRides")) || [];
@@ -20,7 +29,7 @@ function ridesPorUsuario() {
             rides.push(listaRides[i]);
         }
     }
-return rides;
+    return rides;
 }
 
 function cargarDatos() {
@@ -59,10 +68,10 @@ function cargarDatos() {
         deleteButton.textContent = "DELETE";
         newdeleteCell.appendChild(deleteButton);
 
-        deleteButton.addEventListener("click", (event) =>{
+        deleteButton.addEventListener("click", (event) => {
             let rideRow = event.target.parentNode.parentNode;
             //para recuperar el valor de la celda donde está el índice en la tabla...
-            let  atributo_rideName = rideRow.getAttribute("Nombre-Ride");
+            let atributo_rideName = rideRow.getAttribute("Nombre-Ride");
             rideRow.remove();
 
             deleteRide(atributo_rideName)
@@ -71,7 +80,7 @@ function cargarDatos() {
     }
 }
 
-function deleteRide(rideName){
+function deleteRide(rideName) {
     let listaRides = recuperarDataRides();
 
     //Devuelve -1 si no hay coincidencia.... ojo!

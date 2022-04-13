@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>TicoRide-watch-ride</title>
     <link rel="stylesheet" href="Stiles/style.css">
 </head>
+
 <body>
     <img src="Images/logo.webp" alig="center" width="200" height="200">
     <br><br>
@@ -22,7 +24,8 @@
     </div>
 
     <div class="enlinea">
-        <h4>Welcome user</h4>
+        <h4>Welcome: <h2 style="color: darkblue;" id="usuario"> User</h2>
+        </h4>
     </div>
     <img src="Images/photo (1).png" width="50" height="50">
 
@@ -30,16 +33,17 @@
 
     <h6 id="par" style="display: inline;"><a href="newRide.html">Rides</a></h6>
     <h6 id="par" style="font-weight: bolder; display: inline;"><a href="watch_ride.html">Watch</a></h6>
-    <span style="font-size: smaller;"><a style="text-decoration: none; color: lawngreen;font-weight: bolder;" href="editRide.html">Edit</a></span>
+    <span style="font-size: smaller;"><a style="text-decoration: none; color: lawngreen;font-weight: bolder;"
+            href="editRide.html">Edit</a></span>
 
     <form action="">
         <div>
             <label for="RN">Ride Name</label><br>
-            <select onchange="mostrarRide()" style="width: 13em" id="RN" ></select>
+            <select onchange="mostrarRide()" style="width: 13em" id="RN"></select>
         </div>
         <br>
         <label for="from">Start From: </label>
-        <input type="text" id="from" placeholder="Location" disabled >
+        <input type="text" id="from" placeholder="Location" disabled>
         <img src="Images/map.png" alt="" width="15" height="15">
         <label for="to">End: </label>
         <input type="text" id="to" placeholder="Input Text" disabled>
@@ -47,8 +51,8 @@
         <br><br>
         <div style="text-align: justify;padding-left: 540px;"> <label for="Dp">Description</label>
             <br>
-            <textarea name="Description" id="Dp" cols="60" rows="5"
-                placeholder="Add here the description of the ride" disabled></textarea>
+            <textarea name="Description" id="Dp" cols="60" rows="5" placeholder="Add here the description of the ride"
+                disabled></textarea>
         </div>
 
         <hr width="600px" color=black>
@@ -99,6 +103,7 @@
     <br><br>
 
     <script src="JS/logic-watch_ride.js"></script>
-    
+
 </body>
+
 </html>

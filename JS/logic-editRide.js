@@ -2,7 +2,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     cargarCombo();
     mostrarRide();
+    pintarUsuario();
 });
+
+function pintarUsuario() {
+    let usuario = localStorage.getItem("UsuarioCargado");
+    let campoUsuario = document.getElementById("usuario");
+    campoUsuario.innerText = usuario;
+}
 
 function recuperarDataRides() {
     let listaRides = JSON.parse(localStorage.getItem("DataRides")) || [];

@@ -10,9 +10,13 @@ form.addEventListener("submit", function (event) {
 
 //para cargar los datos una vez se abra la pág...
 document.addEventListener("DOMContentLoaded", function () {
-     //cargarDatos();
+    //cargarDatos();
     cargarCombos();
 });
+
+function LimpiarTabla(){
+    location.reload();
+}
 
 function recuperarDataRides() {
     let listaRides = JSON.parse(localStorage.getItem("DataRides")) || [];
@@ -28,7 +32,7 @@ function cargarDatos() {
     for (let i = 0; i < listaRides.length; i++) {
 
         //a la tabla se le agrega una nueva filas
-        let newRideRowRef = tableSearchRide.insertRow(-1);
+        let newRideRowRef = tableSearchRide.insertRow(i + 2);
         //a la fila se le agrega una nueva celda
         let newCellRef = newRideRowRef.insertCell(0);
         newCellRef.textContent = listaRides[i].usuario;
@@ -101,18 +105,20 @@ function toCombo() {
 //Crea arreglo de rides con parametros seleccionados de combos...
 function ridesPorParametro() {
     let comboFrom = document.getElementById("from");
-    let FromSelected = comboFrom.options[comboFrom.selectedIndex].text;
-
     let comboTo = document.getElementById("to");
-    let ToSelected = comboTo.options[comboTo.selectedIndex].text;
-
     let listaRides = recuperarDataRides();
+
     let rides = [];
 
-    for (let i = 0; i < listaRides.length; i++) {
-        if (listaRides[i].from == FromSelected & listaRides[i].to == ToSelected) {
-            rides.push(listaRides[i]);
+    if (comboFrom.length != 0) {
+        let FromSelected = comboFrom.options[comboFrom.selectedIndex].text;  //
+        let ToSelected = comboTo.options[comboTo.selectedIndex].text;
+        
+        for (let i = 0; i < listaRides.length; i++) {
+            if (listaRides[i].from == FromSelected & listaRides[i].to == ToSelected) {
+                rides.push(listaRides[i]);
+            }
         }
     }
-return rides;
+    return rides;
 }
