@@ -69,13 +69,14 @@ function cargarDatos() {
         newdeleteCell.appendChild(deleteButton);
 
         deleteButton.addEventListener("click", (event) => {
-            let rideRow = event.target.parentNode.parentNode;
-            //para recuperar el valor de la celda donde está el índice en la tabla...
-            let atributo_rideName = rideRow.getAttribute("Nombre-Ride");
-            rideRow.remove();
-
-            deleteRide(atributo_rideName)
-
+            if (confirm("Estás seguro de eliminar el ride???")) {
+                let rideRow = event.target.parentNode.parentNode;
+                //para recuperar el valor de la celda donde está el índice en la tabla...
+                let atributo_rideName = rideRow.getAttribute("Nombre-Ride");
+                rideRow.remove();
+                deleteRide(atributo_rideName)
+            } else {
+            }
         })
     }
 }
