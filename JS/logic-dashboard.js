@@ -66,6 +66,7 @@ function cargarDatos() {
         let newdeleteCell = newRideRowRef.insertCell(6);
         let deleteButton = document.createElement("button");
         deleteButton.textContent = "DELETE";
+        deleteButton.style.background = "rgb(4, 194, 105)"
         newdeleteCell.appendChild(deleteButton);
 
         deleteButton.addEventListener("click", (event) => {
