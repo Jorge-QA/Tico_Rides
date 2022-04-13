@@ -21,6 +21,10 @@ color: white;
 background-color: rgb(4, 194, 105);
 }
 
+.userColor {
+color: rgb(190, 228, 36);
+}
+
 table{
     margin: 50px auto;
     background-color: rgb(243, 201, 167);
