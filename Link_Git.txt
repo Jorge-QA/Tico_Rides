@@ -1,0 +1,6 @@
+
+link de git:
+https://github.com/Jorge-QA/Tico_Rides.git
+
+Correr programa desde git:
+https://jorge-qa.github.io/Tico_Rides/
